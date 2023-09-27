@@ -15,17 +15,20 @@ public class CheckBox extends SupportClass
 	{
 		WebElement eleCheckbox = wd.findElement(By.linkText("Checkboxes"));
 		eleCheckbox.click();
+		log.info("Click on element link");
 		
 		List<WebElement> allBox=wd.findElements(By.xpath("//div[@class='example']//form//input"));
-		
+		log.info("Find aal the check box on page");
 		for(WebElement checkbox:allBox) 
 		{
 			if(checkbox.isSelected()) 
 			{
+
 				continue;
 			}
 			else 
 			{
+				log.info("Checkbox is clicked");
 				checkbox.click();
 			}
 		}

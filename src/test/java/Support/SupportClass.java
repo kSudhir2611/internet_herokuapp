@@ -7,6 +7,8 @@ import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +27,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SupportClass 
 {
 	public WebDriver wd;
+	
+	public Logger log = LogManager.getLogger("DemoLogger");
 	
 	@Parameters({"browserName"})
 	@BeforeClass
@@ -48,7 +52,9 @@ public class SupportClass
 		
 		
 		wd.get("https://the-internet.herokuapp.com/");
+		log.info("Application launched");
 		wd.manage().window().maximize();
+		log.info("Window maximised");
 		wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	

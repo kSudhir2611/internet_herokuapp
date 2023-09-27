@@ -30,9 +30,11 @@ public class AddRemoveElement extends SupportClass
 		//click on add/remove element link
 		WebElement addRemove = wd.findElement(By.linkText("Add/Remove Elements"));
 		addRemove.click();
+		log.info("Click on Addremove element");
 		
 		int addedElement = sc.nextInt();
 		int removeElement = sc.nextInt();
+		log.info("Input taken from user for adding and removing element");
 		
 		int elementOnScreen = addedElement - removeElement;
 		
@@ -41,6 +43,7 @@ public class AddRemoveElement extends SupportClass
 		{
 			WebElement addEle = wd.findElement(By.xpath("//button[@onclick='addElement()']"));
 			addEle.click();
+			log.info("clicked on Add button");
 		}
 		Thread.sleep(2000);
 		
@@ -51,6 +54,7 @@ public class AddRemoveElement extends SupportClass
 			{
 				WebElement removeEle = wd.findElement(By.xpath("//button[@class='added-manually']"));
 				removeEle.click();
+				log.info("clicked on delete element");
 			}
 			catch(Exception e) 
 			{
