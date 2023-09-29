@@ -3,13 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Test_Cases.DropDown">
+      <class name="Test_Cases.AlertHandling">
         <methods>
+          <include name="handlingPromptAlert"/>
           <include name="launchBrowser"/>
-          <include name="handleDropdown"/>
+          <include name="handlingConfirmationAlert"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Test_Cases.DropDown -->
+      </class> <!-- Test_Cases.AlertHandling -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

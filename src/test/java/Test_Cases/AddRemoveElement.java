@@ -32,7 +32,9 @@ public class AddRemoveElement extends SupportClass
 		addRemove.click();
 		log.info("Click on Addremove element");
 		
+		System.out.println("Enter the number of Element to be added: ");
 		int addedElement = sc.nextInt();
+		System.out.println("Enter the number of element to be removed: ");
 		int removeElement = sc.nextInt();
 		log.info("Input taken from user for adding and removing element");
 		
@@ -47,7 +49,7 @@ public class AddRemoveElement extends SupportClass
 		}
 		Thread.sleep(2000);
 		
-		//process of removind element
+		//process of removing element
 		for(int i=0;i<removeElement;i++) 
 		{
 			try 
